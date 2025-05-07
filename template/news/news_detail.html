@@ -1,0 +1,52 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %}{{ news.title }}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <!-- Main News Content -->
+            <div class="col-md-8">
+                <div class="blog-box">
+                    <div class="post-media">
+                        <img src="{{ news.image.url }}" class="img-fluid" alt="{{ news.title }}">
+                    </div>
+                    <div class="blog-meta big-meta text-center">
+                        <h3>{{ news.title }}</h3>
+                        <small class="firstsmall">
+                            <a class="bg-orange" href="#">{{ news.category.name }}</a>
+                        </small>
+                        <small><i class="fa fa-calendar"></i> {{ news.published_date|date:"F j, Y" }}</small>
+                        <p>{{ news.body|linebreaks }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <h4 class="mb-4">Recent Posts</h4>
+                    <ul class="list-group">
+                        {% for item in recent_news %}
+                        <li class="list-group-item">
+                            <a href="{% url 'news_detail_page' item.slug %}">{{ item.title|truncatewords:7 }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                    <h4 class="mt-5 mb-4">Categories</h4>
+                    <ul class="list-group">
+                        {% for cat in categories %}
+                        <li class="list-group-item">
+                            <a href="#">{{ cat.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

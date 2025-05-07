@@ -1,0 +1,39 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %} Local news {% endblock title %}
+
+{% block content %}
+<section class="section">
+    <div class="container mt-4">
+        <div class="row">
+            {% for news in local_news %}
+                <div class="col-md-4">
+                    <div class="blog-box">
+                        <div class="post-media">
+                            <a href="{% url 'news_detail_page' news.slug %}" title="{{ news.title }}">
+                                <img src="{{ news.image.url }}" alt="{{ news.title }}" class="img-fluid">
+                                <div class="hovereffect"></div>
+                            </a>
+                        </div><!-- end media -->
+
+                        <div class="blog-meta">
+                            <h4><a href="{% url 'news_detail_page' news.slug %}" title="">{{ news.title|truncatewords:10 }}</a></h4>
+                            <small class="firstsmall">
+                                <a class="bg-orange" href="#" title="">{{ news.category.name }}</a>
+                            </small>
+                            <small><i class="fa fa-calendar"></i> {{ news.published_date|date:"F j, Y" }}</small>
+                        </div><!-- end meta -->
+                    </div><!-- end blog-box -->
+                </div><!-- end col -->
+            {% empty %}
+                <div class="col-md-12">
+                    <p>No foreign news articles found.</p>
+                </div>
+            {% endfor %}
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+
+
+{% endblock content %}

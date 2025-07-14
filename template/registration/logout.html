@@ -1,0 +1,20 @@
+{% extends "news/base.html" %}
+
+{% block title %}Logout page{% endblock title %}
+
+{% block content %}
+
+
+    <div class="container mt-4">
+        <h2>Website - log out</h2>
+        <p>You logged out... </p>
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-link" style="padding: 0;">Logout</button>
+        </form>
+
+        
+    </div>
+
+
+{% endblock content %}

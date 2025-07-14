@@ -1,7 +1,9 @@
 from django.urls import reverse
 from django.utils import timezone
 from django.db import models
-
+from django.contrib.auth.models import User
+from hitcount.models import HitCount
+from django.contrib.contenttypes.fields import GenericRelation
 
 
 # Create your models here.
@@ -31,9 +33,10 @@ class News(models.Model):
     created_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=2, default="draft", choices=Status.choices)
+    hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk', related_query_name='hit_count_relation')
+
     objects = models.Manager() #default
     published = PublishedManager()
-
     class Meta:
         ordering = ["-published_date"]
 
@@ -51,3 +54,22 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class Comments(models.Model):
+    news = models.ForeignKey(News, on_delete=models.CASCADE, related_name="comments")
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    comment = models.TextField()
+    body = models.TextField()
+    created_time = models.DateTimeField(auto_now_add=True)
+    updated_time = models.DateTimeField(auto_now=True)
+    active = models.BooleanField(default=True)
+
+
+
+    class Meta:
+        ordering = ["created_time"]
+
+    def __str__(self):
+        return f"Comment: {self.body} by {self.user}"
+

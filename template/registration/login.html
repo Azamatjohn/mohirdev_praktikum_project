@@ -1,0 +1,15 @@
+{% extends 'news/base.html' %}
+
+{% block title %}Login page{% endblock title %}
+{% block content %}
+<div class="container mt-4" style="padding: 100px">
+    <h2>Website - log in</h2>
+    <p>Please, fill the form to log in</p>
+    <form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Log in</button>
+    </form>
+    <h4>If you do not have account yet, you can <a class="btn-link" href="{% url 'user_register' %}">sign up</a> here!</h4>
+</div>
+
+{% endblock content %}

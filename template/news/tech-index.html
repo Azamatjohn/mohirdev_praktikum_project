@@ -1,5 +1,6 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load hitcount_tags %}
 
 
 {% block title %} Home page {% endblock title %}
@@ -18,6 +19,8 @@
                                         <h4><a href="tech-single.html" title="">The iPhone 17 Air looks incredibly thin in new video leak</a></h4>
                                         <small><a href="tech-single.html" title="">24 April, 2025</a></small>
                                         <small><a href="tech-author.html" title="">by Apple</a></small>
+{#                                        <i class="fa fa-eye" aria-hidden="true"></i>{% get_hit_count for news %}#}
+
                                     </div><!-- end meta -->
                                 </div><!-- end shadow-desc -->
                             </div><!-- end shadow -->
@@ -89,7 +92,7 @@
                                         <small class="firstsmall"><a class="bg-orange" href="#" title="">{{ news.category.name }}</a></small>
                                         <small>{{ news.published_date|date:"d M, Y" }}</small>
                                         <small>by {{ news.author }}</small>
-                                        <small><i class="fa fa-eye"></i> {{ news.views }}</small>
+                                        <small><i class="fa fa-eye"></i> {% get_hit_count for news %}</small>
                                     </div>
                                 </div>
 
@@ -152,7 +155,7 @@
                                         <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Materials</a></small>
                                         <small><a href="tech-single.html" title="">18 July, 2017</a></small>
                                         <small><a href="tech-author.html" title="">by Matilda</a></small>
-                                        <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 33312</a></small>
+                                        <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i></a></small>
                                     </div><!-- end meta -->
                                 </div><!-- end blog-box -->
 

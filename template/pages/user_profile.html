@@ -1,0 +1,47 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %}User Profile{% endblock title %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 bg-light rounded shadow-sm p-4">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">Welcome, {{ user.first_name }}!</h3>
+                {% if profile.photo %}
+                    <img src="{{ profile.photo.url }}" class="rounded-circle mt-3 mb-3" width="150" height="150" alt="Profile Photo">
+                {% else %}
+                    <img src="{% static 'img/default-profile.png' %}" class="rounded-circle mt-3 mb-3" width="150" height="150" alt="Default Profile">
+                {% endif %}
+                <p class="text-muted">Date of birth: {{ profile.date_of_birth }}</p>
+            </div>
+
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input class="form-control" value="{{ user.username }}" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">First Name</label>
+                    <input class="form-control" value="{{ user.first_name }}" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input class="form-control" value="{{ user.last_name }}" readonly>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input class="form-control" value="{{ user.email }}" readonly>
+                </div>
+            </form>
+
+            <div class="d-flex justify-content-between pt-4">
+                <a href="{% url 'password_change' %}" class="btn btn-outline-primary">Change Password</a>
+                <a href="{% url 'profile_edit' %}" class="btn btn-outline-success">Edit Profile</a>
+                <a href="{% url 'logout' %}" class="btn btn-outline-danger">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -431,6 +431,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
                             </li>
+                            <li>
+                                <form method="get" action="{% url 'search_results' %}">
+                                    <input type="search" name="q" placeholder="search" class="form-control ">
+                                </form>
+                            </li>
                         </ul>
                         <ul class="navbar-nav mr-2">
                             <li class="nav-item">
@@ -439,9 +444,24 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-android"></i></a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item pr-2">
                                 <a class="nav-link" href="#"><i class="fa fa-apple"></i></a>
                             </li>
+                            {% if user.is_authenticated %}
+                                <p class="pr-2"><a href="{% url 'user_profile' %}">My profile</a></p>
+                                <p>{% now "jS F Y H:i" %}</p>
+                            <li class="nav-item p-2">
+                                <form method="post" action="{% url 'logout' %}" style="display: inline;">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-info">Logout</button>
+                                </form>
+                            </li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a class="btn btn-link" href="{% url 'login' %}">Login</a>
+                                </li>
+                            {% endif %}
+
                         </ul>
                     </div>
                 </nav>

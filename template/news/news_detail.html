@@ -1,11 +1,13 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load widget_tweaks %}
+{% load hitcount_tags %}
 
 {% block title %}{{ news.title }}{% endblock %}
 
 {% block content %}
 <section class="section">
-    <div class="container">
+    <div class="container mt-4">
         <div class="row">
             <!-- Main News Content -->
             <div class="col-md-8">
@@ -19,7 +21,9 @@
                             <a class="bg-orange" href="#">{{ news.category.name }}</a>
                         </small>
                         <small><i class="fa fa-calendar"></i> {{ news.published_date|date:"F j, Y" }}</small>
+                        <span>Views: {% get_hit_count for news %} | Comments: {{ comments_count }}</span>
                         <p>{{ news.body|linebreaks }}</p>
+                        <a href=""></a>
                     </div>
                 </div>
             </div>
@@ -49,4 +53,67 @@
         </div>
     </div>
 </section>
+    {% if request.user.is_authenticated and request.user.is_superuser %}
+    <div class="card-footer text-center">
+        <a href="{% url 'news_update_page' news.slug %}">Update</a> |
+        <a href="{% url 'news_delete_page' news.slug %}">Delete</a>
+    </div>
+    {% endif %}<br>
+
+    <!-- COMMENTS LIST -->
+<div class="mt-5">
+    <h4 class="mb-4">Comments</h4>
+    {% if comments %}
+        {% for comment in comments %}
+            <div class="border rounded p-3 mb-3 bg-light">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <strong>{{ comment.user }}</strong>
+                    <small class="text-muted">{{ comment.created_time }}</small>
+                </div>
+                <p class="mb-0">{{ comment.comment | linebreaks }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-muted">No comments yet. Be the first to comment!</p>
+    {% endif %}
+</div>
+
+<!-- COMMENT FORM -->
+{% if user.is_authenticated %}
+<div class="container mt-4">
+    <div class="row justify-content-start">
+        <div class="col-md-8">
+            <div class="card shadow-sm mb-5" style="border: 1px solid #ddd;">
+                <div class="card-header" style="background-color: #00bfff; color: white;">
+                    <h5 class="mb-0">💬 Leave a Comment</h5>
+                </div>
+                <div class="card-body" style="padding: 24px;">
+                    <form method="post">{% csrf_token %}
+                        <div class="mb-3">
+                            {{ comment_form.comment.label_tag }}
+                            {{ comment_form.comment|add_class:"form-control" }}
+                        </div>
+                        <button type="submit" class="btn btn-info px-4">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="container mt-4">
+    <div class="row justify-content-start">
+        <div class="col-md-8">
+            <div class="alert alert-warning">
+                <strong>Only registered users can leave a comment.</strong><br>
+                <a href="{% url 'login' %}">Log in</a> or
+                <a href="{% url 'user_register' %}">sign up</a> to join the discussion.
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+
 {% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %}Profile edit{% endblock title %}
+
+{% block content %}
+<div style="padding: 100px">
+<h1>Profile edit</h1>
+<p>You can edit your profile through this form: </p>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}{{ user_form.as_p }}{{ profile_form.as_p }}
+    <button type="submit">Save changes</button>
+    </form>
+</div>
+{% endblock content %}

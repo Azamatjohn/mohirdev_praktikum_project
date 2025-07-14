@@ -1,0 +1,27 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %}{% endblock title %}
+
+{% block content %}
+
+<div style="padding: 100px">
+    <h1>Admin page</h1>
+    <h4>All admins</h4>
+    <table class="table table-bordered">
+        <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Surname</th>
+        </tr>
+        {% for users in admin_users %}
+        <tr>
+            <td>{{ users.username }}</td>
+            x<td>{{ users.first_name }}</td>
+            <td>{{ users.last_name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock content %}

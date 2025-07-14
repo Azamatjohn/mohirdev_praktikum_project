@@ -28,7 +28,8 @@ import news_app
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include('news_app.urls')),
-path("", RedirectView.as_view(url="/news/", permanent=False)),
+    path('accounts/', include('accounts.urls')),
+    path("", RedirectView.as_view(url="/news/", permanent=False)),
 ]
 
 if settings.DEBUG:

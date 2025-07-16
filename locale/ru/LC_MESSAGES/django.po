@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-16 14:56+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: news_project/settings.py:122
+msgid "English"
+msgstr "Английский"
+
+#: news_project/settings.py:123
+msgid "Russian"
+msgstr ""
+
+#: news_project/settings.py:124
+msgid "Korean"
+msgstr "Русский"
+
+#: news_project/settings.py:125
+msgid "Uzbek"
+msgstr "Узбекский"
+
+#: template/news/tech-index.html:7
+msgid " Home page "
+msgstr "Домашняя страница"
+
+#: template/news/tech-index.html:19 template/news/tech-index.html:53
+msgid "Technology"
+msgstr "Технология"
+
+#: template/news/tech-index.html:20
+msgid "The iPhone 17 Air looks incredibly thin in new video leak"
+msgstr "iPhone 17 Air выглядит невероятно тонким в новом видеоутечке"
+
+#: template/news/tech-index.html:21
+msgid "24 April, 2025"
+msgstr "24 апреля 2025 г."
+
+#: template/news/tech-index.html:22
+msgid "by Apple"
+msgstr "от Apple"
+
+#: template/news/tech-index.html:38
+msgid "Do not make mistakes when choosing web hosting"
+msgstr "Не совершайте ошибок при выборе веб-хостинга"
+
+#: template/news/tech-index.html:39
+msgid "25 April, 2025"
+msgstr "25 апреля 2025 г."
+
+#: template/news/tech-index.html:40
+msgid "by WEB"
+msgstr "через ВЕБ"
+
+#: template/news/tech-index.html:54
+msgid "The most reliable Galaxy Note 8 images leaked"
+msgstr "Утечка самых достоверных изображений Galaxy Note 8"
+
+#: template/news/tech-index.html:55
+msgid "01 July, 2017"
+msgstr "01 июля 2017 г."
+
+#: template/news/tech-index.html:56
+msgid "by Jessica"
+msgstr "Джессика"
+
+#: template/news/tech-index.html:72
+msgid "Recent News"
+msgstr "Последние новости"
+
+#: template/news/tech-index.html:132
+msgid "Applications for taking photos of nature in your mobile phones"
+msgstr "Приложения для фотосъемки природы на мобильных телефонах"
+
+#: template/news/tech-index.html:309
+msgid "Trend Videos"
+msgstr "Трендовые видео"
+
+#: template/news/tech-index.html:321
+msgid "We prepared the best 10 laptop presentations for you"
+msgstr "Мы подготовили для вас 10 лучших презентаций ноутбуков"
+
+#: template/news/tech-index.html:337
+msgid "We are guests of ABC Design Studio - Vlog"
+msgstr "Мы гости студии дизайна ABC - Видеоблог"
+
+#: template/news/tech-index.html:353
+msgid "Both blood pressure monitor and intelligent clock"
+msgstr "И тонометр, и умные часы"
+
+#: template/news/tech-index.html:360
+msgid "Popular Posts"
+msgstr "Популярные сообщения"
+
+#: template/news/tech-index.html:382
+msgid "Recent Reviews"
+msgstr "Недавние обзоры"
+
+#: template/news/tech-index.html:407
+msgid "10 practical ways to choose organic.."
+msgstr "10 практичных способов выбрать органические продукты.."
+
+#: template/news/tech-index.html:421
+msgid "We are making homemade ravioli.."
+msgstr "Мы готовим домашние равиоли."
+
+#: template/news/tech-index.html:436
+msgid "Follow Us"
+msgstr "Подписывайтесь на нас"

@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-16 14:57+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: news_project/settings.py:122
+msgid "English"
+msgstr "Ingliz tili"
+
+#: news_project/settings.py:123
+msgid "Russian"
+msgstr "Rus tili"
+
+#: news_project/settings.py:124
+msgid "Korean"
+msgstr "Koreys tili"
+
+#: news_project/settings.py:125
+msgid "Uzbek"
+msgstr "O'zimizziki"
+
+#: template/news/tech-index.html:7
+msgid " Home page "
+msgstr "Bosh sahifa"
+
+#: template/news/tech-index.html:19 template/news/tech-index.html:53
+msgid "Technology"
+msgstr "Texnologiya"
+
+#: template/news/tech-index.html:20
+msgid "The iPhone 17 Air looks incredibly thin in new video leak"
+msgstr "Iphone 17 Air vashshe ingichka chiqarkan"
+
+#: template/news/tech-index.html:21
+msgid "24 April, 2025"
+msgstr "24 Aprel, 2025"
+
+#: template/news/tech-index.html:22
+msgid "by Apple"
+msgstr "Apple tomonidan"
+
+#: template/news/tech-index.html:38
+msgid "Do not make mistakes when choosing web hosting"
+msgstr "web hosting tanlayotganingizda xato qilmang okasi"
+
+#: template/news/tech-index.html:39
+msgid "25 April, 2025"
+msgstr "25 Aprel, 2025"
+
+#: template/news/tech-index.html:40
+msgid "by WEB"
+msgstr "WEB tomonidan"
+
+#: template/news/tech-index.html:54
+msgid "The most reliable Galaxy Note 8 images leaked"
+msgstr "Galaxy Note 8 ning rasmlari chiqibdimish"
+
+#: template/news/tech-index.html:55
+msgid "01 July, 2017"
+msgstr "01 Iyul 2017"
+
+#: template/news/tech-index.html:56
+msgid "by Jessica"
+msgstr "Jessica opa tomonidan"
+
+#: template/news/tech-index.html:72
+msgid "Recent News"
+msgstr "Shu kunlardagi gaplar"
+
+#: template/news/tech-index.html:132
+msgid "Applications for taking photos of nature in your mobile phones"
+msgstr "Telefoningizda tabiatni rasmga olish uchun ilovalar"
+
+#: template/news/tech-index.html:309
+msgid "Trend Videos"
+msgstr "Trend videolar"
+
+#: template/news/tech-index.html:321
+msgid "We prepared the best 10 laptop presentations for you"
+msgstr "Biz sizga eng yaxshi top 10 noutbuk prezentatsiyalarini tayyorladik"
+
+#: template/news/tech-index.html:337
+msgid "We are guests of ABC Design Studio - Vlog"
+msgstr "Biz ABC Design Studio mehmonimiz - Vlog"
+
+#: template/news/tech-index.html:353
+msgid "Both blood pressure monitor and intelligent clock"
+msgstr "Qon bosimi kuzatuvi va aqlli soat"
+
+#: template/news/tech-index.html:360
+msgid "Popular Posts"
+msgstr "Mashhur Postlar"
+
+#: template/news/tech-index.html:382
+msgid "Recent Reviews"
+msgstr "Oxirgi sharhlar"
+
+#: template/news/tech-index.html:407
+msgid "10 practical ways to choose organic.."
+msgstr "Organik tanlashning 10 ta amaliy usuli."
+
+#: template/news/tech-index.html:421
+msgid "We are making homemade ravioli.."
+msgstr "Biz uy qurilishi ravioli tayyorlaymiz.."
+
+#: template/news/tech-index.html:436
+msgid "Follow Us"
+msgstr "Follow qisayiz xursand bo'lamiz!"

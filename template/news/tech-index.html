@@ -1,9 +1,10 @@
 {% extends 'news/base.html' %}
 {% load static %}
 {% load hitcount_tags %}
+{% load i18n %}
 
 
-{% block title %} Home page {% endblock title %}
+{% block title %}{% blocktrans %} Home page {% endblocktrans %}{% endblock title %}
 {% block content %}
 
         <section class="section first-section">
@@ -15,10 +16,10 @@
                              <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
-                                        <span class="bg-orange"><a href="tech-category-01.html" title="">Technology</a></span>
-                                        <h4><a href="tech-single.html" title="">The iPhone 17 Air looks incredibly thin in new video leak</a></h4>
-                                        <small><a href="tech-single.html" title="">24 April, 2025</a></small>
-                                        <small><a href="tech-author.html" title="">by Apple</a></small>
+                                        <span class="bg-orange"><a href="tech-category-01.html" title="">{% blocktrans %}Technology{% endblocktrans %}</a></span>
+                                        <h4><a href="tech-single.html" title="">{% blocktrans %}The iPhone 17 Air looks incredibly thin in new video leak{% endblocktrans %}</a></h4>
+                                        <small><a href="tech-single.html" title="">{% blocktrans %}24 April, 2025{% endblocktrans %}</a></small>
+                                        <small><a href="tech-author.html" title="">{% blocktrans %}by Apple{% endblocktrans %}</a></small>
 {#                                        <i class="fa fa-eye" aria-hidden="true"></i>{% get_hit_count for news %}#}
 
                                     </div><!-- end meta -->
@@ -34,9 +35,9 @@
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
                                         <span class="bg-orange"><a href="tech-category-01.html" title="">Gadgets</a></span>
-                                        <h4><a href="tech-single.html" title="">Do not make mistakes when choosing web hosting</a></h4>
-                                        <small><a href="tech-single.html" title="">25 April, 2025</a></small>
-                                        <small><a href="tech-author.html" title="">by WEB</a></small>
+                                        <h4><a href="tech-single.html" title="">{% blocktrans %}Do not make mistakes when choosing web hosting{% endblocktrans %}</a></h4>
+                                        <small><a href="tech-single.html" title="">{% blocktrans %}25 April, 2025{% endblocktrans %}</a></small>
+                                        <small><a href="tech-author.html" title="">{% blocktrans %}by WEB{% endblocktrans %}</a></small>
                                     </div><!-- end meta -->
                                 </div><!-- end shadow-desc -->
                              </div><!-- end shadow -->
@@ -49,10 +50,10 @@
                              <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
-                                        <span class="bg-orange"><a href="tech-category-01.html" title="">Technology</a></span>
-                                        <h4><a href="tech-single.html" title="">The most reliable Galaxy Note 8 images leaked</a></h4>
-                                        <small><a href="tech-single.html" title="">01 July, 2017</a></small>
-                                        <small><a href="tech-author.html" title="">by Jessica</a></small>
+                                        <span class="bg-orange"><a href="tech-category-01.html" title="">{% blocktrans %}Technology{% endblocktrans %}</a></span>
+                                        <h4><a href="tech-single.html" title="">{% blocktrans %}The most reliable Galaxy Note 8 images leaked{% endblocktrans %}</a></h4>
+                                        <small><a href="tech-single.html" title="">{% blocktrans %}01 July, 2017{% endblocktrans %}</a></small>
+                                        <small><a href="tech-author.html" title="">{% blocktrans %}by Jessica{% endblocktrans %}</a></small>
                                     </div><!-- end meta -->
                                 </div><!-- end shadow-desc -->
                              </div><!-- end shadow -->
@@ -68,7 +69,7 @@
                     <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                         <div class="page-wrapper">
                             <div class="blog-top clearfix">
-                                <h4 class="pull-left">Recent News <a href="#"><i class="fa fa-rss"></i></a></h4>
+                                <h4 class="pull-left">{% blocktrans %}Recent News{% endblocktrans %}<a href="#"><i class="fa fa-rss"></i></a></h4>
                             </div><!-- end blog-top -->
 
                             <div class="blog-list clearfix">
@@ -128,7 +129,7 @@
                                     </div><!-- end col -->
 
                                     <div class="blog-meta big-meta col-md-8">
-                                        <h4><a href="tech-single.html" title="">Applications for taking photos of nature in your mobile phones</a></h4>
+                                        <h4><a href="tech-single.html" title="">{% blocktrans %}Applications for taking photos of nature in your mobile phones{% endblocktrans %}</a></h4>
                                         <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
                                         <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Design</a></small>
                                         <small><a href="tech-single.html" title="">19 July, 2017</a></small>
@@ -305,7 +306,7 @@
                             </div><!-- end widget -->
 
                             <div class="widget">
-                                <h2 class="widget-title">Trend Videos</h2>
+                                <h2 class="widget-title">{% blocktrans %}Trend Videos{% endblocktrans %}</h2>
                                 <div class="trend-videos">
                                     <div class="blog-box">
                                         <div class="post-media">
@@ -317,7 +318,7 @@
                                             </a>
                                         </div><!-- end media -->
                                         <div class="blog-meta">
-                                            <h4><a href="tech-single.html" title="">We prepared the best 10 laptop presentations for you</a></h4>
+                                            <h4><a href="tech-single.html" title="">{% blocktrans %}We prepared the best 10 laptop presentations for you{% endblocktrans %}</a></h4>
                                         </div><!-- end meta -->
                                     </div><!-- end blog-box -->
 
@@ -333,7 +334,7 @@
                                             </a>
                                         </div><!-- end media -->
                                         <div class="blog-meta">
-                                            <h4><a href="tech-single.html" title="">We are guests of ABC Design Studio - Vlog</a></h4>
+                                            <h4><a href="tech-single.html" title="">{% blocktrans %}We are guests of ABC Design Studio - Vlog{% endblocktrans %}</a></h4>
                                         </div><!-- end meta -->
                                     </div><!-- end blog-box -->
 
@@ -349,14 +350,14 @@
                                             </a>
                                         </div><!-- end media -->
                                         <div class="blog-meta">
-                                            <h4><a href="tech-single.html" title="">Both blood pressure monitor and intelligent clock</a></h4>
+                                            <h4><a href="tech-single.html" title="">{% blocktrans %}Both blood pressure monitor and intelligent clock{% endblocktrans %}</a></h4>
                                         </div><!-- end meta -->
                                     </div><!-- end blog-box -->
                                 </div><!-- end videos -->
                             </div><!-- end widget -->
 
                             <div class="widget">
-                                <h2 class="widget-title">Popular Posts</h2>
+                                <h2 class="widget-title">{% blocktrans %}Popular Posts{% endblocktrans %}</h2>
                                 <div class="blog-list-widget">
                                     <div class="list-group">
 
@@ -378,7 +379,7 @@
                             </div><!-- end widget -->
 
                             <div class="widget">
-                                <h2 class="widget-title">Recent Reviews</h2>
+                                <h2 class="widget-title">{% blocktrans %}Recent Reviews{% endblocktrans %}</h2>
                                 <div class="blog-list-widget">
                                     <div class="list-group">
 
@@ -403,7 +404,7 @@
                                         <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 justify-content-between">
                                                 <img src="{% static 'images/tech_blog_03.jpg' %}" alt="" class="img-fluid float-left">
-                                                <h5 class="mb-1">10 practical ways to choose organic..</h5>
+                                                <h5 class="mb-1">{% blocktrans %}10 practical ways to choose organic..{% endblocktrans %}</h5>
                                                 <span class="rating">
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
@@ -417,7 +418,7 @@
                                         <a href="tech-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 last-item justify-content-between">
                                                 <img src="{% static 'images/tech_blog_07.jpg' %}" alt="" class="img-fluid float-left">
-                                                <h5 class="mb-1">We are making homemade ravioli..</h5>
+                                                <h5 class="mb-1">{% blocktrans %}We are making homemade ravioli..{% endblocktrans %}</h5>
                                                 <span class="rating">
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
@@ -432,7 +433,7 @@
                             </div><!-- end widget -->
 
                             <div class="widget">
-                                <h2 class="widget-title">Follow Us</h2>
+                                <h2 class="widget-title">{% blocktrans %}Follow Us{% endblocktrans %}</h2>
 
                                 <div class="row text-center">
                                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
